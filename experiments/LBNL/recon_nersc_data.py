@@ -25,8 +25,9 @@ if __name__ == "__main__":
     sharpness = 1.0
     view_step = 1
     recon_pad_factor = 1.15
-    granularity = [1, 8, 64, 512, 2048]
-    partition_sequence = [0, 0, 1, 0, 1, 2, 1, 2, 3, 2, 3, 4, 3, 4, 4]
+    granularity = [1, 2, 64, 512, 2048]
+    partition_sequence = [0, 1, 2, 3, 3, 2, 2, 2, 3, 3, 3, 4, 3, 4, 4]
+    # partition_sequence = [0, 0, 1, 0, 1, 2, 1, 2, 3, 2, 3, 4, 3, 4, 4]
 
     # Specify the input file:  <root_data_directory>/<input_data_directory>/<input_filename>
     input_filename = "nist-sand-30-200-mix_27keV_z8mm_n657_20240425_164409_.h5"
@@ -42,7 +43,7 @@ if __name__ == "__main__":
     vmin = 0
     vmax = 0.001
     num_slices_to_use = 5
-    channels_cut = 2000  # Cut this many sinogram channels, half on each end.
+    channels_cut = 0  # Cut this many sinogram channels, half on each end.
 
     # Set up the output files for all iterations
     output_file_names = []
